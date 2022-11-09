@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Golang templates</title>
+</head>
+<body>
+	<h1>{{ .Header}}</h1>
+	<ul>
+		{{range .Films }}
+		<li>{{ .Title | upper }} - in year {{ .Year }} {{ if lt .Year 2000 }}(classic){{end}}</li>
+		{{end}}	
+	</ul>
+	
+	<h2>Guests:</h2>
+	{{range $index, $name := .People }}
+	- {{inc $index }}: {{$name}}<br />
+	{{end}}
+</body>
+</html>
