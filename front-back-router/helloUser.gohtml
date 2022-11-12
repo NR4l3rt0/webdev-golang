@@ -1,0 +1,11 @@
+<html>
+	<head></head>
+	<body>
+		{{ if . }}
+		<h1>User info:  </h1>
+		<li>Hello {{ . }}! </li>
+		{{ else }}
+		<p> Please enter a name as a path route. For example: localhost:8080/<strong>Peter</strong></p>
+		{{ end }}
+	</body>
+</html>
